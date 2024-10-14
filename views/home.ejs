@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css"> <!-- Link the CSS file here -->
+    <title>NamueneTec Inventory Management</title>
+    
+    <!-- JavaScript to confirm item deletion -->
+    <script>
+        function confirmDelete(event) {
+            if (!confirm("Are you sure you want to delete this item?")) {
+                event.preventDefault(); // Prevent form submission
+            }
+        }
+    </script>
+
+    <!-- JavaScript to confirm CSV export -->
+    <script>
+        function confirmExport() {
+            const isConfirmed = confirm("Please confirm you want to export the inventory list as a CSV file.");
+            if (isConfirmed) {
+                window.location.href = '/export-csv'; // Redirect to the export route if confirmed
+            }
+        }
+    </script>    
+</head>
+
+<!-- Header and Navigation -->
+<header>
+    <img class="logo" src="/namuenetecogo.png" alt="NamueneTec logo">
+    <div class="heading">
+        <h1 id="mainHeading">NamueneTec Inventory Management</h1>
+        <nav>
+            <ul>
+              <li class="<%= activeTab === 'home' ? 'active' : '' %>"><a href="/">Home</a></li>
+              <li class="<%= activeTab === 'about' ? 'active' : '' %>"><a href="/about">About</a></li>
+              <li class="<%= activeTab === 'howto' ? 'active' : '' %>"><a href="/howto">HowTo</a></li>
+              <li class="<%= activeTab === 'categories' ? 'active' : '' %>"><a href="/categories">Categories</a></li>
+              <li class="<%= activeTab === 'items' ? 'active' : '' %>"><a href="/items">Items</a></li>
+               <!-- CSV Export Link -->
+               <li><a href="#" onclick="confirmExport()"><span style="color: yellow;">Export Inventory List to CSV</span></a></li> <!-- Export CSV link with confirmation -->
+            </ul>
+          </nav>                  
+    </div>
+</header>
+
+<!-- Main Content -->
+<body>
+    <main>
+        <h2>Categories and Their Items</h2>
+
+        <table border="1" cellpadding="10" cellspacing="0" width="100%">
+            <!-- Table Headers -->
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th class="itemNameTitle">Item Name</th>
+                    <th>Description</th>
+                    <th class="quantityHeader">Quantity</th>
+                    <th class="priceHeader">Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Loop through each category -->
+                <% categories.forEach(category => { %>
+                    <!-- Category Row as a heading -->
+                    <tr>
+                        <td colspan="6" style="background-color: #f0f0f0;"><strong><%= category.name %></strong></td>
+                    </tr>
+
+                    <!-- Loop through each item of the category -->
+                    <% if (category.items && category.items.length > 0) { %>
+                        <% category.items.forEach(item => { %>
+                            <tr>
+                                <td></td> <!-- Empty cell under Category column -->
+                                <td class="itemName"><%= item.name %></td>
+                                <td><%= item.description %></td>
+                                <td class="quantity"><%= item.quantity %></td>
+                                <td class="price">$<%= item.price %></td>
+                            </tr>
+                        <% }); %>
+                    <% } else { %>
+                        <tr>
+                            <td></td>
+                            <td colspan="5">No items available in this category.</td>
+                        </tr>
+                    <% } %>
+                <% }); %>
+            </tbody>
+        </table>
+
+        <p><a href="#mainHeading">Back to top</a></p>
+
+    </main>
+    
+    <!-- About the developer -->
+    <footer>
+        <p>&copy; 2024 NamueneTec</p>
+        <p class="developer">Developed by Dr. Kato Samuel Namuene</p>
+        <p class="email">Email: kato.namuene@ubuea.cm</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About NamueneTec Inventory Management</title>
+    <link rel="stylesheet" href="/styles.css"> <!-- Include your CSS file -->
+</head>
+
+<!-- About NamueneTec -->
+<body>
+    <!-- Header with logo and navigation -->
+    <header>
+        <img class="logo" src="/namuenetecogo.png" alt="NamueneTec logo">
+        <div class="heading">
+            <h1 id="mainHeading">About NamueneTec Inventory Management</h1>
+            <nav>
+                <ul>
+                  <li class="<%= activeTab === 'home' ? 'active' : '' %>"><a href="/">Home</a></li>
+                  <li class="<%= activeTab === 'about' ? 'active' : '' %>"><a href="/about">About</a></li>
+                  <li class="<%= activeTab === 'howto' ? 'active' : '' %>"><a href="/howto">HowTo</a></li>
+                  <li class="<%= activeTab === 'categories' ? 'active' : '' %>"><a href="/categories">Categories</a></li>
+                  <li class="<%= activeTab === 'items' ? 'active' : '' %>"><a href="/items">Items</a></li>
+                </ul>
+            </nav>     
+        </div>
+    </header>
+    
+    <main class="aboutMain">
+        <div class="content">
+            <h1 class="howtoH1">About NamueneTec</h1>
+            <hr style="color: Yellow;">
+
+            <!-- Table of Contents -->
+            <section>
+                <h2 class="aboutH2">Table of Contents</h2>
+                    <ul class="aboutUl">
+                        <li class="aboutLi"><a href="#web-apps">Web Apps Development</a></li>
+                        <li class="aboutLi"><a href="#desktop-apps">Desktop Apps Development</a></li>
+                        <li class="aboutLi"><a href="#computer-maintenance">Computer Maintenance & Repair</a></li>
+                        <li class="aboutLi"><a href="#cybersecurity">Cybersecurity Services</a></li>
+                        <li class="aboutLi"><a href="#database-management">Database Development & Management</a></li>
+                        <li class="aboutLi"><a href="#hardware-software-installation">Hardware & Software Installation</a></li>
+                        <li class="aboutLi"><a href="#network-maintenance">Network Maintenance</a></li>
+                        <li class="aboutLi"><a href="#ict-training">ICT Training & Curriculum Development</a></li>
+                    </ul>
+            </section>
+            <br>
+            <hr style="color: Yellow;">
+
+            <!-- Detailed Information -->
+            <section id="web-apps">
+                <h2 class="aboutH2">Web Apps Development</h2>
+                <ul class="aboutUl">
+                    <li class="aboutLi">Develop custom web applications tailored to client requirements for optimal performance.</li>
+                    <li class="aboutLi">Use modern frameworks like React, Webpack for dynamic, responsive user interfaces.</li>
+                    <li class="aboutLi">Implement secure, scalable backend systems with Node.js.</li>
+                    <li class="aboutLi">Ensure cross-browser compatibility for seamless user experiences across different platforms.</li>
+                    <li class="aboutLi">Offer full-stack development services, managing both frontend and backend needs.</li>
+                    <li class="aboutLi">Integrate third-party APIs, cloud services, and databases for enhanced functionality.</li>
+                    <li class="aboutLi">Provide ongoing maintenance and updates to ensure applications remain secure and efficient.</li>
+                </ul>
+            </section>
+            
+            <section id="desktop-apps">
+                <h2 class="aboutH2">Desktop Apps Development</h2>
+                <ul class="aboutUl">
+                    <li class="aboutLi">Design and develop powerful desktop applications that run on Windows, macOS, or Linux.</li>
+                    <li class="aboutLi">Utilize programming languages like C#, Visual Basic and Java for robust, high-performance solutions.</li>
+                    <li class="aboutLi">Focus on usability and user-friendly interfaces for non-technical users.</li>
+                    <li class="aboutLi">Create industry-specific applications for sectors such as education, finance, and health.</li>
+                    <li class="aboutLi">Ensure offline functionality and seamless data synchronization with cloud systems when needed.</li>
+                    <li class="aboutLi">Offer regular software updates, patches, and technical support for desktop applications.</li>
+                    <li class="aboutLi">Integrate desktop apps with existing software ecosystems for improved workflow automation.</li>
+                </ul>
+            </section>
+            
+            <section id="computer-maintenance">
+                <h2 class="aboutH2">Computer Maintenance & Repair</h2>
+                <ul class="aboutUl">
+                    <li class="aboutLi">Provide diagnostics and troubleshooting services for hardware and software issues.</li>
+                    <li class="aboutLi">Offer routine maintenance to keep systems running smoothly and prevent downtime.</li>
+                    <li class="aboutLi">Replace or upgrade hardware components, such as RAM, hard drives, and power supplies.</li>
+                    <li class="aboutLi">Install and configure software, including operating systems, drivers, and utilities.</li>
+                    <li class="aboutLi">Remove malware, viruses, and other security threats that compromise system performance.</li>
+                    <li class="aboutLi">Set up data backup and recovery solutions to prevent data loss during repairs.</li>
+                    <li class="aboutLi">Offer both on-site and remote assistance for immediate support and repairs.</li>
+                </ul>
+            </section>
+            
+            <section id="cybersecurity">
+                <h2 class="aboutH2">Cybersecurity Services</h2>
+                <ul class="aboutUl">
+                    <li class="aboutLi">Conduct vulnerability assessments to identify security weaknesses in systems.</li>
+                    <li class="aboutLi">Implement firewalls, encryption, and secure access protocols to protect sensitive data.</li>
+                    <li class="aboutLi">Monitor networks for unusual activity and potential cyber threats in real time.</li>
+                    <li class="aboutLi">Provide security awareness training to employees on safe digital practices.</li>
+                    <li class="aboutLi">Perform regular updates and patches to maintain security against emerging threats.</li>
+                    <li class="aboutLi">Develop incident response plans for quick recovery from data breaches or attacks.</li>
+                    <li class="aboutLi">Ensure compliance with regulatory frameworks like GDPR, HIPAA, and PCI-DSS.</li>
+                </ul>
+            </section>
+            
+            <section id="database-management">
+                <h2 class="aboutH2">Database Development & Management</h2>
+                <ul class="aboutUl">
+                    <li class="aboutLi">Design and develop custom databases for efficient data storage and retrieval.</li>
+                    <li class="aboutLi">Work with SQL, PostgreSQL, MySQL, and NoSQL databases like MongoDB.</li>
+                    <li class="aboutLi">Ensure data integrity through proper indexing, normalization, and constraints.</li>
+                    <li class="aboutLi">Set up regular data backups and disaster recovery plans to prevent data loss.</li>
+                    <li class="aboutLi">Provide database performance tuning and optimization for faster queries.</li>
+                    <li class="aboutLi">Offer migration services from legacy systems to modern database platforms.</li>
+                    <li class="aboutLi">Manage ongoing database administration, including security, updates, and audits.</li>
+                </ul>
+            </section>
+            
+            <section id="hardware-software-installation">
+                <h2 class="aboutH2">Hardware & Software Installation</h2>
+                <ul class="aboutUl">
+                    <li class="aboutLi">Install and configure new hardware components like printers, monitors, and network devices.</li>
+                    <li class="aboutLi">Set up operating systems, including Windows, macOS, and Linux, with necessary drivers.</li>
+                    <li class="aboutLi">Install and configure software applications tailored to business needs.</li>
+                    <li class="aboutLi">Optimize hardware and software settings for maximum performance and compatibility.</li>
+                    <li class="aboutLi">Provide on-site installation services for business networks and computer labs.</li>
+                    <li class="aboutLi">Ensure proper licensing and activation of software to avoid legal issues.</li>
+                    <li class="aboutLi">Train staff on using newly installed hardware and software efficiently.</li>
+                </ul>
+            </section>
+            
+            <section id="network-maintenance">
+                <h2 class="aboutH2">Network Maintenance</h2>
+                <ul class="aboutUl">
+                    <li class="aboutLi">Design, set up, and maintain both wired and wireless networks for businesses.</li>
+                    <li class="aboutLi">Monitor network performance to ensure minimal downtime and quick issue resolution.</li>
+                    <li class="aboutLi">Provide network security solutions like firewalls, VPNs, and access controls.</li>
+                    <li class="aboutLi">Upgrade network infrastructure to support higher bandwidth and more devices.</li>
+                    <li class="aboutLi">Optimize network settings for improved speed and reliability in high-traffic environments.</li>
+                    <li class="aboutLi">Set up remote access and collaboration tools for distributed teams.</li>
+                    <li class="aboutLi">Offer 24/7 monitoring and support to ensure uninterrupted network service.</li>
+                </ul>
+            </section>
+            
+            <section id="ict-training">
+                <h2 class="aboutH2">ICT Training & Curriculum Development</h2>
+                <ul class="aboutUl">
+                    <li class="aboutLi">Offer comprehensive ICT training programs for both beginners and advanced learners.</li>
+                    <li class="aboutLi">Provide courses on topics such as web development, database management, and cybersecurity.</li>
+                    <li class="aboutLi">Develop customized training curriculums based on the needs of businesses or institutions.</li>
+                    <li class="aboutLi">Train students in hardware maintenance, networking, and software development.</li>
+                    <li class="aboutLi">Use hands-on projects and real-world case studies to enhance learning experiences.</li>
+                    <li class="aboutLi">Offer certifications upon course completion to validate skills and competencies.</li>
+                    <li class="aboutLi">Stay up-to-date with industry trends to ensure training is relevant to current technology demands.</li>
+                </ul>
+            </section>
+        </div>
+        <p><a href="#mainHeading">Back to top</a></p>
+    </main>
+    
+    <!-- About the developer -->
+    <footer>
+        <p>&copy; 2024 NamueneTec</p>
+        <p class="developer">Developed by Dr. Kato Samuel Namuene</p>
+        <p class="email">Email: kato.namuene@ubuea.cm</p>
+    </footer>
+    
+</body>
+</html>

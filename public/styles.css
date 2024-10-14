@@ -1,0 +1,381 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Main container styling */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 160px 0px 160px;
+  font-family: Arial, sans-serif;
+  background-color: #FFF;
+  color: #333;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-family: 'Arial', sans-serif;
+  color: #FFF;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #000;
+}
+
+/* Header styling */
+header {
+  display: grid;
+  grid-template-columns: 125px 2fr;
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+}
+
+.logo {
+  width: 125px;
+  height: 80px;
+}
+
+/* Navigation styling */
+nav {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #FFF;
+}
+
+nav ul li.active a {
+  color: yellow;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+}
+
+header nav a:hover {
+  color: yellow;
+  text-decoration: none;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+}
+
+/* HowTo and About page styling */
+.howtoMain, .aboutMain {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.content {
+  margin: 20px auto;
+  max-width: 900px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.howtoH1, .aboutH1 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.howtoH2, .aboutH2 {
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+.howtoH1, .howtoH2, .aboutH2 {
+  color: #333;
+}
+
+.howtoP, .howtoLi, .aboutLi {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #666;
+}
+
+.howtoUl, .aboutUl {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+code {
+  background-color: #f0f0f0;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* Item and Category page styling */
+Form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 0 auto; /* Center the form */
+  width: 30%; /* Set width of form */
+  background-color: #ffffff; /* White background for the form */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+label {
+    display: block; /* Block display for labels */
+    margin-bottom: 8px; /* Space between label and input */
+    font-weight: bold; /* Bold labels */
+}
+
+input[type="text"] {
+    width: 90%; /* Full-width inputs */
+    padding: 10px; /* Padding for inputs */
+    margin-bottom: 8px; /* Space below inputs */
+    font-size: 14px; /* Font size */
+    border: 1px solid #ced4da; /* Light gray border */
+    border-radius: 4px; /* Slightly rounded corners */
+    transition: border-color 0.3s; /* Smooth border color change */
+}
+
+input[type="text"]:focus {
+    border-color: #007bff; /* Blue border on focus */
+    outline: none; /* Remove outline */
+}
+
+input[type="number"], #category_id, #category {
+    padding: 10px; /* Padding for inputs */
+    margin-bottom: 8px; /* Space below inputs */
+    width: 90%; /* Full-width inputs */
+    font-size: 16px; /* Font size */
+    border: 1px solid #ced4da; /* Light gray border */
+    border-radius: 4px; /* Slightly rounded corners */
+    transition: border-color 0.3s; /* Smooth border color change */
+}
+
+label {
+  display: block; /* Block display for labels */
+  margin-bottom: 8px; /* Space between label and input */
+  font-weight: bold; /* Bold labels */
+}
+
+
+.itemNameTitle, .itemName {
+  width: 250px; /* Set width of input field */
+}
+.categoryNameTitle, .categoryName {
+  width: 290px; /* Set width of input field */
+}
+
+.quantity, .quantityHeader, .price, .priceHeader {
+  width: 120px; /* Set width of input field */
+}
+
+.quantity, .quantityHeader, .priceHeader {
+  width: 120px; /* Set width of input field */
+  text-align: center; /* Center text inside input field */
+}
+
+.price {
+  text-align: right; /* Align price to the right */
+}
+
+.actions {
+  display: flex; /* Align buttons in a row */
+  justify-content: center; /* Center buttons */
+  align-items: center;
+}
+
+.actionHeader {
+  text-align: center; /* Center text inside header */
+}
+
+.actionHeader, .actions {
+  width: 130px; /* Set width of buttons */
+}
+
+/* Button Styling */
+button {
+  padding: 5px 10px; /* Button padding */
+  background-color: #ff4d4d; /* Red background */
+  color: white; /* White text */
+  border: none; /* No border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Hand cursor on hover */
+}
+
+button:hover {
+  background-color: #ff1a1a; /* Darker red on hover */
+}
+.updateButton {
+  display: flex; /* Align buttons in a row */
+  justify-content: center; /* Center buttons */
+}
+.update {
+  text-align: center; /* Center the button */
+  background-color: #4CAF50; /* Primary button color */
+  color: white; /* Text color */
+  border: none; /* No border */
+  border-radius: 30px; /* Rounded corners */
+  padding: 10px 15px; /* Padding for the button */
+  cursor: pointer; /* Pointer cursor */
+  font-size: 16px; /* Button text size */
+  transition: background-color 0.3s; /* Smooth background color change */
+}
+
+.update:hover {
+  background-color: #33a139; /* Darker blue on hover */
+}
+
+/* Home page, category and items styling */
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse; /* Ensures no space between table cells */
+  margin-bottom: 20px; /* Adds spacing below the table */
+  box-shadow: 1px 2px 3px yellow; /* Adds shadow to table */
+}
+
+th, td {
+  padding: 12px 15px; /* Adds padding inside cells */
+  text-align: left; /* Aligns text to the left */
+  border: 1px solid #ddd; /* Adds border to cells */
+}
+
+thead th {
+  box-shadow: 1px 2px 3px #4CAF50; /* Adds shadow to table */
+  background-color: #4CAF50; /* Green header background */
+  color: white; /* White text for headers */
+}
+
+/* Alternating Row Colors */
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9; /* Light gray for even rows */
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #fff; /* White for odd rows */
+}
+
+/* Category Header Row Styling */
+tbody tr td[colspan="6"] {
+  background-color: #f0f0f0; /* Light gray background for category rows */
+  font-weight: bold; /* Bold font for category names */
+  font-size: 1.2em; /* Slightly larger font size for category */
+  color: #333; /* Darker text color for category names */
+}
+
+/* Hover Effect on Rows */
+tbody tr:hover {
+  background-color: #f1f1f1; /* Slightly darker gray on hover */
+}
+
+a {
+  color: #4CAF50; /* Green text for links */
+  text-decoration: none; /* Removes underline */
+  margin-right: 10px; /* Adds space between links and buttons */
+}
+
+a:hover {
+  text-decoration: none; /* Underline on hover */
+  color: rgb(4, 148, 25);
+}
+
+.addItem, .addCategory {
+  margin-bottom: 20px;
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text */
+  border: none; /* No border */
+  border-radius: 20px; /* Rounded corners */
+  padding: 10px 15px; /* Padding for the button */
+  cursor: pointer; /* Pointer cursor */
+  font-size: 16px; /* Button text size */
+}
+
+.addItem:hover, .addCategory:hover {
+  background-color: #33a139; /* Darker green on hover */
+  color: yellow;
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+}
+
+.back {
+  text-align: center;
+}
+
+/* Footer styling */
+footer {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  header {
+      padding: 10px;
+  }
+
+  header nav {
+      font-size: 0.9em;
+  }
+
+  h1 {
+      font-size: 1.8em;
+  }
+
+  h2 {
+      font-size: 1.5em;
+  }
+
+  .category-section {
+      padding: 0 10px;
+  }
+
+  .item-card {
+      padding: 15px;
+  }
+
+  .item-card h4 {
+      font-size: 1.1em;
+  }
+
+  table, th, td {
+    font-size: 0.9em; /* Smaller font size on smaller screens */
+}
+
+  button {
+      padding: 4px 8px; /* Smaller buttons on mobile */
+  }
+}

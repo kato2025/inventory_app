@@ -1,0 +1,64 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles.css"> <!-- Link your CSS file -->
+  <title>Add New Items</title>
+</head>
+
+<!-- Add New Item Form -->
+<body>
+  <!-- Header with logo and navigation -->
+  <header>
+    <img class="logo" src="/namuenetecogo.png" alt="NamueneTec logo">
+    <div class="heading">
+        <h1>Add New Items to NamueneTec Inventory Management</h1>
+        <nav>
+          <ul>
+            <li class="<%= activeTab === 'home' ? 'active' : '' %>"><a href="/">Home</a></li>
+            <li class="<%= activeTab === 'about' ? 'active' : '' %>"><a href="/about">About</a></li>
+            <li class="<%= activeTab === 'howto' ? 'active' : '' %>"><a href="/howto">HowTo</a></li>
+            <li class="<%= activeTab === 'categories' ? 'active' : '' %>"><a href="/categories">Categories</a></li>
+            <li class="<%= activeTab === 'items' ? 'active' : '' %>"><a href="/items">Items</a></li>
+          </ul>
+        </nav>          
+    </div>
+  </header>
+
+  <!-- Add and display all items in the inventory -->
+    <form action="/items" method="POST">
+      <br>
+      <label for="name">Item Name:</label>
+      <input type="text" id="name" name="name" required>
+      
+      <label for="description">Description:</label>
+      <input type="text" id="description" name="description" required>
+      
+      <label for="quantity">Quantity:</label>
+      <input type="number" id="quantity" name="quantity" required>
+      
+      <label for="price">Price:</label>
+      <input type="number" id="price" name="price" required>
+      
+      <label for="category">Category:</label>
+      <select id="category" name="categoryid" required>
+        <option value="" disabled selected>Select a category...</option>
+        <% categories.forEach(category => { %>
+          <option value="<%= category.id %>"><%= category.name %></option>
+        <% }) %>
+      </select>
+
+      <button class="update" type="submit">Add Item</button>
+      <br>
+      
+      </form>
+      <br>
+      <div class="back"> <a href="/items">Back to Items</a></div>
+      <br>
+      
+      <!-- About the developer -->
+    <footer>
+        <p>&copy; 2024 NamueneTec</p>
+        <p class="developer">Developed by Dr. Kato Samuel Namuene</p>
+        <p class="email">Email: kato.namuene@ubuea.cm</p>
+    </footer>
+  </body>

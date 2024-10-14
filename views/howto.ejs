@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HowTo use NamueneTec Inventory Management</title>
+    <link rel="stylesheet" href="/styles.css"> <!-- Link to your CSS file -->
+</head>
+
+<!-- How to use NamueneTec Inventory Management -->
+    <body>
+        <!-- Header and Navigation -->
+        <header>
+            <img class="logo" src="/namuenetecogo.png" alt="NamueneTec logo">
+            <div class="heading">
+                <h1 id="mainHeading">HowTo use NamueneTec Inventory Management</h1>
+                <nav>
+                    <ul>
+                    <li class="<%= activeTab === 'home' ? 'active' : '' %>"><a href="/">Home</a></li>
+                    <li class="<%= activeTab === 'about' ? 'active' : '' %>"><a href="/about">About</a></li>
+                    <li class="<%= activeTab === 'howto' ? 'active' : '' %>"><a href="/howto">HowTo</a></li>
+                    <li class="<%= activeTab === 'categories' ? 'active' : '' %>"><a href="/categories">Categories</a></li>
+                    <li class="<%= activeTab === 'items' ? 'active' : '' %>"><a href="/items">Items</a></li>
+                    </ul>
+                </nav>   
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="howtoMain">
+                <div class="content">
+                    <h1 class="howtoH1">How to Use the NamueneTec Inventory Management App</h1>
+                    <hr style="color: Yellow;">
+                    
+                    <!-- Table of Contents -->
+                    <section class="table-of-contents">
+                        <h2 class="howtoH2">Table of Contents</h2>
+                        <ul class="howtoUl">
+                            <li class="howtoLi"><a href="#accessing-the-app">Accessing the App</a></li>
+                            <li class="howtoLi"><a href="#home-page">Home Page</a></li>
+                            <li class="howtoLi"><a href="#managing-categories">Managing Categories</a></li>
+                            <li class="howtoLi"><a href="#managing-items">Managing Items</a></li>
+                            <li class="howtoLi"><a href="#about-page">About Page</a></li>
+                            <li class="howtoLi"><a href="#howto-page">HowTo Page</a></li>
+                            <li class="howtoLi"><a href="#warnings-for-destructive-actions">Warnings for Destructive Actions</a></li>
+                            <li class="howtoLi"><a href="#export-to-csv">Exporting Inventory List to CSV</a></li>
+                        </ul>
+                    </section>
+                    <br>
+                    <hr style="color: Yellow;">
+
+                    <!-- How to Use the App -->
+                    <section id="accessing-the-app">
+                        <h2 class="howtoH2">1. Accessing the App</h2>
+                        <p class="howtoP">Open a web browser and go to the homepage of the app (e.g., <code>http://localhost:3000</code> if running locally). You’ll be presented with a dashboard showing the <strong>categories</strong> and their associated <strong>items</strong>.</p>
+                    </section>
+            
+                    <section id="home-page">
+                        <h2 class="howtoH2">2. Home Page</h2>
+                        <p class="howtoP">The <strong>Home</strong> page is the landing page of the app, where you can view all categories and items at a glance. Categories are listed, each followed by the items that belong to that category in a <strong>table format</strong>.</p>
+                        <p class="howtoP"><strong>Navigation Menu:</strong></p>
+                        <ul class="howtoUl">
+                            <li class="howtoLi"><strong>Home:</strong> Returns you to the homepage.</li>
+                            <li class="howtoLi"><strong>About:</strong> Provides information about the app and its developer.</li>
+                            <li class="howtoLi"><strong>HowTo:</strong> Displays instructions on how to use the app (this page).</li>
+                            <li class="howtoLi"><strong>Categories:</strong> A page for managing categories.</li>
+                            <li class="howtoLi"><strong>Items:</strong> A page for managing items.</li>
+                            <li class="howtoLi"><strong>Exporting Inventory List to CSV:</strong> A page for exporting th categories and their items to a .csv file</li>
+                        </ul>
+                        <p class="howtoP">Each page in the navigation has an <strong>active tab indicator</strong>: when you are on a page, the corresponding tab is highlighted in <strong>yellow</strong>.</p>
+                    </section>
+            
+                    <section id="managing-categories">
+                        <h2 class="howtoH2">3. Managing Categories</h2>
+                        <p class="howtoP">On the <strong>Categories</strong> page, you can manage all categories within the app. You can:</p>
+                        <ul class="howtoUl">
+                            <li class="howtoLi"><strong>View all Category Items:</strong> Click on a "Category Name" in the list of categories to view all items within it.</li>
+                            <li class="howtoLi"><strong>Add a New Category:</strong> Click on the "Add New Category" button and fill out the form to create a new category.</li>
+                            <li class="howtoLi"><strong>Edit a Category:</strong> Click on the <strong>Edit</strong> button next to a category to modify its name or details.</li>
+                            <li class="howtoLi"><strong>Delete a Category:</strong> Click the <strong>Delete</strong> button next to the category. If there are items associated with the category, the app will prevent deletion and prompt you to delete the items first.</li>
+                        </ul>
+                    </section>
+            
+                    <section id="managing-items">
+                        <h2 class="howtoH2">4. Managing Items</h2>
+                        <p class="howtoP">On the <strong>Items</strong> page, you can manage individual items within categories. You can:</p>
+                        <ul class="howtoUl">
+                            <li class="howtoLi"><strong>Add a New Item:</strong> Click on the "Add New Item" button, select the appropriate category, and enter the item details (name, description, quantity, price).</li>
+                            <li class="howtoLi"><strong>Edit an Item:</strong> Click the <strong>Edit</strong> button next to an item to change its name, description, quantity, or price.</li>
+                            <li class="howtoLi"><strong>Delete an Item:</strong> Click the <strong>Delete</strong> button to remove an item. A <strong>confirmation prompt</strong> will appear to ensure you don't accidentally delete an item.</li>
+                        </ul>
+                    </section>
+            
+                    <section id="about-page">
+                        <h2 class="howtoH2">5. About Page</h2>
+                        <p class="howtoP">The <strong>About</strong> page provides an overview of the app and credits to its developer, <strong>Dr. Kato Samuel Namuene</strong>. It also includes contact information for support or feedback.</p>
+                    </section>
+            
+                    <section id="howto-page">
+                        <h2 class="howtoH2">6. HowTo Page</h2>
+                        <p class="howtoP">The <strong>HowTo</strong> page (this page) serves as the user manual. It contains instructions on how to use each feature of the app, ensuring users can navigate and manage the inventory effectively.</p>
+                    </section>
+            
+                    <section id="warnings-for-destructive-actions">
+                        <h2 class="howtoH2">7. Warnings for Destructive Actions</h2>
+                        <p class="howtoP">The app provides <strong>confirmation prompts</strong> when performing any destructive action, such as deleting items or categories. This helps prevent accidental data loss.</p>
+                        <ul class="howtoUl">
+                            <li class="howtoLi"><strong>Deleting an Item:</strong> Before deleting an item, you will be prompted to confirm the action. If you cancel, the deletion will be aborted.</li>
+                            <li class="howtoLi"><strong>Deleting a Category with Items:</strong> If a category has items associated with it, you will be prompted to first delete the items before removing the category itself. This ensures data integrity.</li>
+                        </ul>
+                    </section>
+
+                    <section id="export-to-csv">
+                        <h2 class="howtoH2">8. Exporting Inventory List to CSV</h2>
+                        <p class="howtoP">The app allows you to <strong>export the list of categories and items</strong> as a CSV file, enabling you to keep a backup or share the data easily.</p>
+                        <ul class="howtoUl">
+                            <li class="howtoLi"><strong>Access the Export Option:</strong> You can find the "Export as CSV" link in the navigation bar of the <strong>Home</strong> page.</li>
+                            <li class="howtoLi"><strong>File Destination:</strong> Once you click on the export link, the CSV file will be automatically generated and saved in your device download folder.</li>
+                            <li class="howtoLi"><strong>File Format:</strong> The CSV file will include all categories and their associated items, with details such as item name, description, quantity, and price. The file will be named in the format: <em>NamueneTec_Inventory_YYYY-MM-DD_HH-MM-SS.csv</em>.</li>
+                            <li class="howtoLi"><strong>Data Organization:</strong> The CSV file will have columns for category name, item name, description, quantity, and price, allowing easy readability and import into spreadsheet applications like Excel.</li>
+                            <li class="howtoLi"><strong>Assessing the CSV file:</strong> The CSV file can be opened using Microsoft Excel, Apple Numbers, Google Sheets and any other spreadsheet program which supports the .csv extension.</li>
+                        </ul>
+                    </section>
+                    
+                </div>
+                <p><a href="#mainHeading">Back to top</a></p>
+        </main>
+    </body>
+
+    <!-- About the developer -->
+    <footer>
+        <p>&copy; 2024 NamueneTec</p>
+        <p class="developer">Developed by Dr. Kato Samuel Namuene</p>
+        <p class="email">Email: kato.namuene@ubuea.cm</p>
+    </footer>
+</html>
