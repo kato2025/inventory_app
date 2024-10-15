@@ -23,7 +23,15 @@
                 window.location.href = '/export-csv'; // Redirect to the export route if confirmed
             }
         }
-    </script>    
+    </script>   
+    
+    <!-- JavaScript for Menu toggle -->
+    <script>
+        function toggleMenu() {
+            const navItems = document.getElementById("nav-items");
+            navItems.classList.toggle("show");
+        }
+    </script>
 </head>
 
 <!-- Header and Navigation -->
@@ -32,16 +40,19 @@
     <div class="heading">
         <h1 id="mainHeading">NamueneTec Inventory Management</h1>
         <nav>
-            <ul>
-              <li class="<%= activeTab === 'home' ? 'active' : '' %>"><a href="/">Home</a></li>
-              <li class="<%= activeTab === 'about' ? 'active' : '' %>"><a href="/about">About</a></li>
-              <li class="<%= activeTab === 'howto' ? 'active' : '' %>"><a href="/howto">HowTo</a></li>
-              <li class="<%= activeTab === 'categories' ? 'active' : '' %>"><a href="/categories">Categories</a></li>
-              <li class="<%= activeTab === 'items' ? 'active' : '' %>"><a href="/items">Items</a></li>
-               <!-- CSV Export Link -->
-               <li><a href="#" onclick="confirmExport()"><span style="color: yellow;">Export Inventory List to CSV</span></a></li> <!-- Export CSV link with confirmation -->
+            <div class="menu-icon" onclick="toggleMenu()">
+                &#9776; <!-- This is the "hamburger" icon -->
+            </div>
+            <ul id="nav-items">
+                <li class="<%= activeTab === 'home' ? 'active' : '' %>"><a href="/">Home</a></li>
+                <li class="<%= activeTab === 'about' ? 'active' : '' %>"><a href="/about">About</a></li>
+                <li class="<%= activeTab === 'howto' ? 'active' : '' %>"><a href="/howto">HowTo</a></li>
+                <li class="<%= activeTab === 'categories' ? 'active' : '' %>"><a href="/categories">Categories</a></li>
+                <li class="<%= activeTab === 'items' ? 'active' : '' %>"><a href="/items">Items</a></li>
+                <!-- CSV Export Link -->
+                <li><a href="#" onclick="confirmExport()"><span style="color: yellow;">Export Inventory List to CSV</span></a></li>
             </ul>
-          </nav>                  
+        </nav>                        
     </div>
 </header>
 

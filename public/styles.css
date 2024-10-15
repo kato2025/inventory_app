@@ -45,27 +45,40 @@ header {
 
 /* Navigation styling */
 nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
 }
 
 nav ul {
-  list-style-type: none;
+  display: flex;
+  margin: 0;
   padding: 0;
+  gap: 15px;
+  list-style-type: none;
 }
 
 nav ul li {
   display: inline;
-  margin-right: 10px;
 }
 
 nav ul li a {
+  padding: 10px;
   text-decoration: none;
   color: #FFF;
 }
 
 nav ul li.active a {
   color: yellow;
+}
+
+/* Hide the menu icon by default */
+.menu-icon {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
 }
 
 header nav a {
@@ -77,11 +90,6 @@ header nav a {
 header nav a:hover {
   color: yellow;
   text-decoration: none;
-}
-
-.heading {
-  display: flex;
-  flex-direction: column;
 }
 
 /* HowTo and About page styling */
@@ -342,7 +350,7 @@ footer {
 }
 
 /* Mobile responsiveness */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   header {
       padding: 10px;
   }
@@ -373,9 +381,39 @@ footer {
 
   table, th, td {
     font-size: 0.9em; /* Smaller font size on smaller screens */
-}
+  }
 
   button {
       padding: 4px 8px; /* Smaller buttons on mobile */
+  }
+
+  nav ul {
+    display: none; /* Hide the navigation items */
+    flex-direction: column;
+    gap: 0;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: green;
+    width: 100%;
+  }
+
+  nav ul li {
+    text-align: left;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  nav ul li a {
+    color: white;
+  }
+
+  .menu-icon {
+    display: block; /* Show the icon */
+  }
+
+/* When the menu is toggled, show the nav items */
+  nav ul.show {
+    display: flex;
   }
 }

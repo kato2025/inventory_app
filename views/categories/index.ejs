@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles.css"> <!-- Link your CSS file -->
     <title>Categories</title>
+
+    <!-- JavaScript for Menu toggle -->
+    <script>
+        function toggleMenu() {
+            const navItems = document.getElementById("nav-items");
+            navItems.classList.toggle("show");
+        }
+    </script>
 </head>
 
 <!-- Add and display new categories to the database -->
@@ -15,14 +23,18 @@
         <div class="heading">
             <h1 id="mainHeading">NamueneTec Inventory Management Categories</h1>
             <nav>
-                <ul>
-                  <li class="<%= activeTab === 'home' ? 'active' : '' %>"><a href="/">Home</a></li>
-                  <li class="<%= activeTab === 'about' ? 'active' : '' %>"><a href="/about">About</a></li>
-                  <li class="<%= activeTab === 'howto' ? 'active' : '' %>"><a href="/howto">HowTo</a></li>
-                  <li class="<%= activeTab === 'categories' ? 'active' : '' %>"><a href="/categories">Categories</a></li>
-                  <li class="<%= activeTab === 'items' ? 'active' : '' %>"><a href="/items">Items</a></li>
+                <div class="menu-icon" onclick="toggleMenu()">
+                    &#9776; <!-- This is the "hamburger" icon -->
+                </div>
+                <ul id="nav-items">
+                    <li class="<%= activeTab === 'home' ? 'active' : '' %>"><a href="/">Home</a></li>
+                    <li class="<%= activeTab === 'about' ? 'active' : '' %>"><a href="/about">About</a></li>
+                    <li class="<%= activeTab === 'howto' ? 'active' : '' %>"><a href="/howto">HowTo</a></li>
+                    <li class="<%= activeTab === 'categories' ? 'active' : '' %>"><a href="/categories">Categories</a></li>
+                    <li class="<%= activeTab === 'items' ? 'active' : '' %>"><a href="/items">Items</a></li>
                 </ul>
-            </nav>              
+            </nav>
+        </div>               
     </header>
 
     <main>
