@@ -24,10 +24,12 @@ h1 {
 
 h2 {
   margin-bottom: 20px;
-  text-align: center;
+  text-align: left;
   color: #000;
 }
-
+.homeH2 {
+  text-align: center;
+}
 /* Header styling */
 header {
   display: grid;
@@ -193,20 +195,7 @@ label {
   font-weight: bold; /* Bold labels */
 }
 
-
-.itemNameTitle, .itemName {
-  width: 250px; /* Set width of input field */
-}
-.categoryNameTitle, .categoryName {
-  width: 290px; /* Set width of input field */
-}
-
-.quantity, .quantityHeader, .price, .priceHeader {
-  width: 120px; /* Set width of input field */
-}
-
-.quantity, .quantityHeader, .priceHeader {
-  width: 120px; /* Set width of input field */
+.quantity, .quantityHeader, .priceHeader, .actions, .actionHeader {
   text-align: center; /* Center text inside input field */
 }
 
@@ -214,23 +203,10 @@ label {
   text-align: right; /* Align price to the right */
 }
 
-.actions {
-  display: flex; /* Align buttons in a row */
-  justify-content: center; /* Center buttons */
-  align-items: center;
-}
-
-.actionHeader {
-  text-align: center; /* Center text inside header */
-}
-
-.actionHeader, .actions {
-  width: 130px; /* Set width of buttons */
-}
-
 /* Button Styling */
 button {
   padding: 5px 10px; /* Button padding */
+  text-align: center;
   background-color: #ff4d4d; /* Red background */
   color: white; /* White text */
   border: none; /* No border */
@@ -265,7 +241,7 @@ button:hover {
 
 /* Table Styling */
 table {
-  width: 100%;
+
   border-collapse: collapse; /* Ensures no space between table cells */
   margin-bottom: 20px; /* Adds spacing below the table */
   box-shadow: 1px 2px 3px yellow; /* Adds shadow to table */
@@ -318,6 +294,7 @@ a:hover {
 
 .addItem, .addCategory {
   margin-bottom: 20px;
+  text-align: center; /* Center the button */
   background-color: #4CAF50; /* Green background */
   color: white; /* White text */
   border: none; /* No border */
