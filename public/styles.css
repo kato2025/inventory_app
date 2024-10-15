@@ -33,7 +33,7 @@ h2 {
 /* Header styling */
 header {
   display: grid;
-  grid-template-columns: 125px 2fr;
+  grid-template-columns: 1fr 7fr;
   margin-bottom: 20px;
   padding: 15px;
   background-color: #4CAF50;
@@ -241,7 +241,6 @@ button:hover {
 
 /* Table Styling */
 table {
-
   border-collapse: collapse; /* Ensures no space between table cells */
   margin-bottom: 20px; /* Adds spacing below the table */
   box-shadow: 1px 2px 3px yellow; /* Adds shadow to table */
