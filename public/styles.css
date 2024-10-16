@@ -84,7 +84,7 @@ nav ul li.active a {
 /* Hide the menu icon by default */
 .menu-icon {
   display: none;
-  font-size: 30px;
+  font-size: 40px;
   cursor: pointer;
 }
 
