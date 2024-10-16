@@ -39,7 +39,6 @@
     <!-- Add and display all items in the inventory -->
     <main>
         <a class="addItem" href="/items/new">Add New Item</a>
-
         <table>
             <thead>
                 <tr>
@@ -53,7 +52,7 @@
             <tbody>
                 <% items.forEach(item => { %>
                     <tr>
-                        <td class="itemName"><%= item.name %></td>
+                        <td><%= item.name %></td>
                         <td><%= item.description %></td>
                         <td class="quantity"><%= item.quantity %></td>
                         <td class="price">$<%= item.price %></td>

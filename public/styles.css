@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+body {
+  margin:0;
+  padding: 0;
+}
 /* Main container styling */
 main {
   display: flex;
@@ -203,20 +207,6 @@ label {
   text-align: right; /* Align price to the right */
 }
 
-/* Button Styling */
-button {
-  padding: 5px 10px; /* Button padding */
-  text-align: center;
-  background-color: #ff4d4d; /* Red background */
-  color: white; /* White text */
-  border: none; /* No border */
-  border-radius: 4px; /* Rounded corners */
-  cursor: pointer; /* Hand cursor on hover */
-}
-
-button:hover {
-  background-color: #ff1a1a; /* Darker red on hover */
-}
 .updateButton {
   display: flex; /* Align buttons in a row */
   justify-content: center; /* Center buttons */
@@ -235,6 +225,38 @@ button:hover {
 
 .update:hover {
   background-color: #33a139; /* Darker blue on hover */
+}
+
+.addItem, .addCategory {
+  margin-bottom: 20px;
+  text-align: center; /* Center the button */
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text */
+  border: none; /* No border */
+  border-radius: 20px; /* Rounded corners */
+  padding: 10px 15px; /* Padding for the button */
+  cursor: pointer; /* Pointer cursor */
+  font-size: 16px; /* Button text size */
+}
+
+.addItem:hover, .addCategory:hover {
+  background-color: #33a139; /* Darker green on hover */
+  color: yellow;
+}
+
+/* Button Styling */
+button {
+  padding: 5px 10px; /* Button padding */
+  text-align: center;
+  background-color: #ff4d4d; /* Red background */
+  color: white; /* White text */
+  border: none; /* No border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Hand cursor on hover */
+}
+
+button:hover {
+  background-color: #ff1a1a; /* Darker red on hover */
 }
 
 /* Home page, category and items styling */
@@ -291,23 +313,6 @@ a:hover {
   color: rgb(4, 148, 25);
 }
 
-.addItem, .addCategory {
-  margin-bottom: 20px;
-  text-align: center; /* Center the button */
-  background-color: #4CAF50; /* Green background */
-  color: white; /* White text */
-  border: none; /* No border */
-  border-radius: 20px; /* Rounded corners */
-  padding: 10px 15px; /* Padding for the button */
-  cursor: pointer; /* Pointer cursor */
-  font-size: 16px; /* Button text size */
-}
-
-.addItem:hover, .addCategory:hover {
-  background-color: #33a139; /* Darker green on hover */
-  color: yellow;
-}
-
 .error-message {
   color: red;
   font-weight: bold;
@@ -346,14 +351,6 @@ footer {
 
   .category-section {
       padding: 0 10px;
-  }
-
-  .item-card {
-      padding: 15px;
-  }
-
-  .item-card h4 {
-      font-size: 1.1em;
   }
 
   table, th, td {
